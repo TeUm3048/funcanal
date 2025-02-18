@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Функциональный анализ",
+    "section": "",
+    "text": "Пример\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Главная"
+    ]
+  },
+  {
+    "objectID": "docs/example.html",
+    "href": "docs/example.html",
+    "title": "Пример",
+    "section": "",
+    "text": "Это пример документа.\n\n\n\\[\nx = 2 + 2\n\\]",
+    "crumbs": [
+      "Пример"
+    ]
+  },
+  {
+    "objectID": "docs/example.html#заголовок",
+    "href": "docs/example.html#заголовок",
+    "title": "Пример",
+    "section": "",
+    "text": "\\[\nx = 2 + 2\n\\]",
+    "crumbs": [
+      "Пример"
+    ]
+  }
+]
