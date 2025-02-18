@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: _site
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+website:
+  title: "Функциональный анализ"
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - text: "Главная"
+        href: index.qmd
+      - auto: "docs/**/*.qmd"
+  page-navigation: true
+
+        
+
+editor: visual
