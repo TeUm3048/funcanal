@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-02-14">
 
-<title>Линейные нормированные пространства. Норма. Примеры. – Функциональный анализ</title>
+<title>Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства – Функциональный анализ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../docs/2025-02-20.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../docs/2025-02-20-2.html" rel="next">
+<link href="../docs/2025-02-14-linear-normed-space.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/2025-02-14-linear-normed-space.html">Линейные нормированные пространства. Норма. Примеры.</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/2025-02-20.html">Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,13 +144,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../docs/2025-02-14-linear-normed-space.html" class="sidebar-item-text sidebar-link active">
+  <a href="../docs/2025-02-14-linear-normed-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Линейные нормированные пространства. Норма. Примеры.</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../docs/2025-02-20.html" class="sidebar-item-text sidebar-link">
+  <a href="../docs/2025-02-20.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства</span></a>
   </div>
 </li>
@@ -170,14 +170,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#пример.-ряды-фурье-в-l2-pi-pi." id="toc-пример.-ряды-фурье-в-l2-pi-pi." class="nav-link active" data-scroll-target="#пример.-ряды-фурье-в-l2-pi-pi.">Пример. Ряды Фурье в <span class="math inline">\(L^2[-\pi, \pi]\)</span>.</a></li>
-  <li><a href="#линейное-пространство." id="toc-линейное-пространство." class="nav-link" data-scroll-target="#линейное-пространство.">Линейное пространство.</a></li>
-  <li><a href="#норма" id="toc-норма" class="nav-link" data-scroll-target="#норма">Норма</a></li>
-  <li><a href="#зачем-нам-нужна-норма" id="toc-зачем-нам-нужна-норма" class="nav-link" data-scroll-target="#зачем-нам-нужна-норма">Зачем нам нужна норма?</a></li>
-  <li><a href="#предел-последовательности-в-линейном-нормированном-пространстве" id="toc-предел-последовательности-в-линейном-нормированном-пространстве" class="nav-link" data-scroll-target="#предел-последовательности-в-линейном-нормированном-пространстве">Предел последовательности в линейном нормированном пространстве</a></li>
-  <li><a href="#полное-пространство" id="toc-полное-пространство" class="nav-link" data-scroll-target="#полное-пространство">Полное пространство</a></li>
-  <li><a href="#фундаментальная-последовость" id="toc-фундаментальная-последовость" class="nav-link" data-scroll-target="#фундаментальная-последовость">Фундаментальная последовость</a></li>
-  <li><a href="#теорема-сходимости-в-полном-пространстве" id="toc-теорема-сходимости-в-полном-пространстве" class="nav-link" data-scroll-target="#теорема-сходимости-в-полном-пространстве">Теорема сходимости в полном пространстве</a></li>
+  <li><a href="#неравенство-гёльдера" id="toc-неравенство-гёльдера" class="nav-link active" data-scroll-target="#неравенство-гёльдера">Неравенство Гёльдера</a>
+  <ul class="collapse">
+  <li><a href="#сопряженные-показатели" id="toc-сопряженные-показатели" class="nav-link" data-scroll-target="#сопряженные-показатели">Сопряженные показатели</a></li>
+  <li><a href="#спомогательная-лемма" id="toc-спомогательная-лемма" class="nav-link" data-scroll-target="#спомогательная-лемма">Спомогательная лемма</a></li>
+  <li><a href="#неравенство-гёльдера-1" id="toc-неравенство-гёльдера-1" class="nav-link" data-scroll-target="#неравенство-гёльдера-1">Неравенство Гёльдера</a></li>
+  </ul></li>
+  <li><a href="#банаховы-пространства" id="toc-банаховы-пространства" class="nav-link" data-scroll-target="#банаховы-пространства">Банаховы пространства</a></li>
+  <li><a href="#гильбертовы-пространства" id="toc-гильбертовы-пространства" class="nav-link" data-scroll-target="#гильбертовы-пространства">Гильбертовы пространства</a>
+  <ul class="collapse">
+  <li><a href="#скалярное-произведение" id="toc-скалярное-произведение" class="nav-link" data-scroll-target="#скалярное-произведение">Скалярное произведение</a></li>
+  <li><a href="#следствие" id="toc-следствие" class="nav-link" data-scroll-target="#следствие">Следствие</a></li>
+  </ul></li>
+  <li><a href="#неравенство-коши-буняковского" id="toc-неравенство-коши-буняковского" class="nav-link" data-scroll-target="#неравенство-коши-буняковского">Неравенство Коши-Буняковского</a>
+  <ul class="collapse">
+  <li><a href="#доказательство" id="toc-доказательство" class="nav-link" data-scroll-target="#доказательство">Доказательство</a></li>
+  <li><a href="#следствие-1" id="toc-следствие-1" class="nav-link" data-scroll-target="#следствие-1">Следствие</a></li>
+  <li><a href="#задача-1" id="toc-задача-1" class="nav-link" data-scroll-target="#задача-1">Задача 1</a></li>
+  <li><a href="#задача-2" id="toc-задача-2" class="nav-link" data-scroll-target="#задача-2">Задача 2</a></li>
+  <li><a href="#эпсилон-сеть" id="toc-эпсилон-сеть" class="nav-link" data-scroll-target="#эпсилон-сеть">Эпсилон сеть</a></li>
+  <li><a href="#всюду-плотное-множество" id="toc-всюду-плотное-множество" class="nav-link" data-scroll-target="#всюду-плотное-множество">Всюду плотное множество</a></li>
+  <li><a href="#примеры" id="toc-примеры" class="nav-link" data-scroll-target="#примеры">Примеры</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -186,7 +200,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Линейные нормированные пространства. Норма. Примеры.</h1>
+<h1 class="title">Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства</h1>
 </div>
 
 
@@ -209,58 +223,81 @@ window.Quarto = {
 </header>
 
 
-<section id="пример.-ряды-фурье-в-l2-pi-pi." class="level2">
-<h2 class="anchored" data-anchor-id="пример.-ряды-фурье-в-l2-pi-pi.">Пример. Ряды Фурье в <span class="math inline">\(L^2[-\pi, \pi]\)</span>.</h2>
-<p><span class="math inline">\(L^2[-\pi, \pi]\)</span> - пространство функций на отрезке <span class="math inline">\([-\pi, \pi]\)</span>, такие что</p>
-<p><span class="math display">\[
-\int_{-\pi}^{\pi} |f(x)|^2 dx &lt; \infty.
-\]</span></p>
-</section>
-<section id="линейное-пространство." class="level2">
-<h2 class="anchored" data-anchor-id="линейное-пространство.">Линейное пространство.</h2>
-<p><span class="math inline">\(X\)</span> — линейное пространство,если</p>
-<p><span class="math display">\[
-x, y \in X \Rightarrow x + y \in X, \quad \alpha x \in X.
-\]</span></p>
-</section>
-<section id="норма" class="level2">
-<h2 class="anchored" data-anchor-id="норма">Норма</h2>
+<p>Вспомним определение нормы:</p>
 <p>Норма в <span class="math inline">\(X\)</span>: <span class="math inline">\(||X|| \rightarrow \mathbb{C}\ (\mathbb{R})\)</span></p>
 <ol type="1">
 <li><span class="math inline">\(||k\cdot x|| = |k|\cdot ||x||, \quad k \in \mathbb{C}\ (\mathbb{R})\)</span></li>
 <li><span class="math inline">\(|| x + y || \leq ||x|| + ||y||\)</span></li>
 <li><span class="math inline">\(||x|| \geq 0, \quad ||x|| = 0 \Leftrightarrow x = 0\)</span></li>
 </ol>
-</section>
-<section id="зачем-нам-нужна-норма" class="level2">
-<h2 class="anchored" data-anchor-id="зачем-нам-нужна-норма">Зачем нам нужна норма?</h2>
-<p>Используя норму, мы можем определить расстояние между элементами пространства, а также сходимость последовательностей.</p>
-</section>
-<section id="предел-последовательности-в-линейном-нормированном-пространстве" class="level2">
-<h2 class="anchored" data-anchor-id="предел-последовательности-в-линейном-нормированном-пространстве">Предел последовательности в линейном нормированном пространстве</h2>
-<p><span class="math inline">\(x_n \in X\)</span> — последовательность элементов пространства <span class="math inline">\(X\)</span>.</p>
-<p><span class="math inline">\(x_n \rightarrow x\)</span>, если <span class="math inline">\(||x_n - x|| \rightarrow 0\)</span> при <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
-</section>
-<section id="полное-пространство" class="level2">
-<h2 class="anchored" data-anchor-id="полное-пространство">Полное пространство</h2>
-<p>Пространство <span class="math inline">\(X\)</span> называется полным, если в нем существует предел для любой фундаментальной последовательности.</p>
-<p>Или</p>
-<p><span class="math inline">\(X\)</span> — полное, если <span class="math display">\[
-x_n \in X, \quad x_n \rightarrow x_0 \Rightarrow x_0 \in X.
-\]</span></p>
-</section>
-<section id="фундаментальная-последовость" class="level2">
-<h2 class="anchored" data-anchor-id="фундаментальная-последовость">Фундаментальная последовость</h2>
-<p><span class="math inline">\(x_n \in X\)</span> — фундаментальная последовательность, если</p>
+<p>Пример.</p>
+<p>Пространство <span class="math inline">\(l_n^p\)</span></p>
 <p><span class="math display">\[
-\forall \varepsilon &gt; 0 \quad \exists N: \forall n, m &gt; N \quad ||x_n - x_m|| &lt; \varepsilon.
+\begin{aligned}
+x = (x_1, ..., x_n) \\
+||x||_p = \left( \sum_{i=1}^{n} |x_i|^p \right)^{1/p}
+\end{aligned}
+\]</span></p>
+<p>При <span class="math inline">\(p = 2\)</span> получаем евклидову норму.</p>
+<p>Пространство <span class="math inline">\(l_n^\infty\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+||x||_\infty = \max_{1 \leq i \leq n} |x_i| \\
+||x||_p \rightarrow ||x||_\infty \quad \text{при} \quad p \rightarrow \infty
+\begin{end}
+\]</span></p>
+<p>Пространство функций:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L_p[a, b] \\
+||f||_p = \left( \int_{a}^{b} |f(x)|^p dx \right)^{1/p}
+\end{aligned}
+\]</span></p>
+<p>Свойства нормы можно переносить между разными p_1 и p_2.</p>
+<p><span class="math inline">\(L^{p_1} \leftrightarrow L^{p_2}\)</span></p>
+<section id="неравенство-гёльдера" class="level2">
+<h2 class="anchored" data-anchor-id="неравенство-гёльдера">Неравенство Гёльдера</h2>
+<section id="сопряженные-показатели" class="level3">
+<h3 class="anchored" data-anchor-id="сопряженные-показатели">Сопряженные показатели</h3>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{1}{p} + \frac{1}{q} = 1 \\
+\end{aligned}
+\]</span></p>
+<p>Сопряженные показатели <span class="math inline">\(p\)</span> и <span class="math inline">\(q\)</span>.</p>
+</section>
+<section id="спомогательная-лемма" class="level3">
+<h3 class="anchored" data-anchor-id="спомогательная-лемма">Спомогательная лемма</h3>
+<p><span class="math display">\[
+||fg||_1 \leq ||f||_p \cdot ||g||_q
+\]</span></p>
+<section id="доказательство-леммы" class="level4">
+<h4 class="anchored" data-anchor-id="доказательство-леммы">Доказательство леммы</h4>
+<p>Рассмотрим функцию <span class="math inline">\(f(x) = x^m - mx\)</span>, при <span class="math inline">\(x &gt; 0, 0 &lt;m &lt;1\)</span>.</p>
+<p>Возьмем производную:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f^\prime(x) = m(x^{m-1} - 1) \\
+f^\prime(x) &gt; 0, \quad x &gt; 0 \Rightarrow
+f(1) &gt; f(x), \quad x &gt; 0
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+1- m &gt; x^m - mx \Rightarrow m(x-1) &lt; x^m - 1
 \]</span></p>
 </section>
-<section id="теорема-сходимости-в-полном-пространстве" class="level2">
-<h2 class="anchored" data-anchor-id="теорема-сходимости-в-полном-пространстве">Теорема сходимости в полном пространстве</h2>
+</section>
+<section id="неравенство-гёльдера-1" class="level3">
+<h3 class="anchored" data-anchor-id="неравенство-гёльдера-1">Неравенство Гёльдера</h3>
 <p><span class="math display">\[
-x_n \text{ сходится} \Leftrightarrow x_n \text{ фундаментальна}.
+\sum_{i=1}^{n} |a_i b_i| \leq \left( \sum_{i=1}^{n} |a_i|^p \right)^{1/p} \cdot \left( \sum_{i=1}^{n} |b_i|^q \right)^{1/q}
 \]</span></p>
+<p>Или в интегральной форме:</p>
+<p><span class="math display">\[
+\int_{a}^{b} |f(x)g(x)| dx \leq \left( \int_{a}^{b} |f(x)|^p dx \right)^{1/p} \cdot \left( \int_{a}^{b} |g(x)|^q dx \right)^{1/q}
+\]</span></p>
+<section id="доказательство-неравенства-гёльдера" class="level4">
+<h4 class="anchored" data-anchor-id="доказательство-неравенства-гёльдера">Доказательство неравенства Гёльдера</h4>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -271,8 +308,147 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>TODO: Добавить больше примеров пространств.</p>
+<p>TODO: Добавить доказательство</p>
 </div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Причем здесь неравенство треугольника в <span class="math inline">\(l^p\)</span>, <span class="math inline">\(L^p\)</span>? См. К.А гл. IV параграф 5</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="банаховы-пространства" class="level2">
+<h2 class="anchored" data-anchor-id="банаховы-пространства">Банаховы пространства</h2>
+<p>Нормированное линейное пространство <span class="math inline">\(X\)</span> называется банаховым, если оно полное относительно нормы.</p>
+<p><span class="math display">\[
+x_n \in X, {x_n} \text{ фундаментальна} \Rightarrow \exists x_0 \in X: ||x_n - x_0|| \rightarrow 0 \quad \text{при} \quad n \rightarrow \infty
+\]</span></p>
+</section>
+<section id="гильбертовы-пространства" class="level2">
+<h2 class="anchored" data-anchor-id="гильбертовы-пространства">Гильбертовы пространства</h2>
+<p><span class="math inline">\(H\)</span> — гильбертово пространство, если</p>
+<ol type="1">
+<li><span class="math inline">\(H\)</span> — банахово пространство</li>
+<li>в <span class="math inline">\(H\)</span> определено скалярное произведение <span class="math inline">\((x, y)\)</span></li>
+</ol>
+<section id="скалярное-произведение" class="level3">
+<h3 class="anchored" data-anchor-id="скалярное-произведение">Скалярное произведение</h3>
+<ol type="1">
+<li><span class="math inline">\((kx, y) = k(x, y)\)</span></li>
+<li><span class="math inline">\((x_1 + x_2, y) = (x_1, y) + (x_2, y)\)</span></li>
+<li><span class="math inline">\((x, y) = \overline{(y, x)}\)</span> (комплексное сопряжение)</li>
+<li><span class="math inline">\((x, x) \geq 0, \quad (x, x) = 0 \Leftrightarrow x = 0\)</span></li>
+</ol>
+</section>
+<section id="следствие" class="level3">
+<h3 class="anchored" data-anchor-id="следствие">Следствие</h3>
+<p>Если у нас есть гильбертово пространство (в пространстве есть Скалярное произведение), то в нем можно ввести норму:</p>
+<p><span class="math display">\[
+||x|| = \sqrt{(x, x)}
+\]</span></p>
+</section>
+</section>
+<section id="неравенство-коши-буняковского" class="level2">
+<h2 class="anchored" data-anchor-id="неравенство-коши-буняковского">Неравенство Коши-Буняковского</h2>
+<p>В любой гильбертовой пространстве выполнено неравенство Коши-Буняковского:</p>
+<p><span class="math display">\[
+(x, y)^2 \leq (x, x) \cdot (y, y)
+\]</span></p>
+<p>В частности, для <span class="math inline">\(l^2\)</span>:</p>
+<p><span class="math display">\[
+(x, y) = \sum_{i=1}^{n} x_i y_i
+\]</span></p>
+<section id="доказательство" class="level3">
+<h3 class="anchored" data-anchor-id="доказательство">Доказательство</h3>
+<p><span class="math display">\[
+\begin{aligned}
+x, y \in H \\
+||x - \lambda y||^2 = (x - \lambda y, x - \lambda y) \geq 0 \\
+(x, x) - 2\lambda (x, y) + \lambda^2 (y, y) \geq 0 \\
+\lambda^2 ||y||^2 - 2\lambda (x, y) + ||x||^2 \geq 0 \\
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+D = 4(x, y)^2 - 4(x, x)(y, y) \leq 0 \\
+(x, y)^2 \leq (x, x)(y, y)
+\end{aligned}
+\]</span></p>
+</section>
+<section id="следствие-1" class="level3">
+<h3 class="anchored" data-anchor-id="следствие-1">Следствие</h3>
+<p><span class="math inline">\(||x||^2 = (x, x)\)</span> удовлетворяет неравенству треугольника.</p>
+<section id="доказательство-1" class="level4">
+<h4 class="anchored" data-anchor-id="доказательство-1">Доказательство</h4>
+<p><span class="math display">\[
+\begin{aligned}
+||x + y||^2 = (x + y, x + y) = (x, x) + 2(x, y) + (y, y) \leq ||x||^2 + 2||x|| \cdot ||y|| + ||y||^2
+\end{aligned}
+\]</span></p>
+</section>
+</section>
+<section id="задача-1" class="level3">
+<h3 class="anchored" data-anchor-id="задача-1">Задача 1</h3>
+<p>Равенство паралелограмма:</p>
+<p><span class="math display">\[
+||x + y||^2 + ||x - y||^2 = 2||x||^2 + 2||y||^2
+\]</span></p>
+</section>
+<section id="задача-2" class="level3">
+<h3 class="anchored" data-anchor-id="задача-2">Задача 2</h3>
+<p>В <span class="math inline">\(C[0, 1]\)</span> нет скалярного произведения. (Используй неравенство паралелограмма)</p>
+<section id="решение" class="level4">
+<h4 class="anchored" data-anchor-id="решение">Решение</h4>
+<p>Построим пример:</p>
+<p>Выберем <span class="math inline">\(f(x), g(x)\)</span>, такие что</p>
+<p><span class="math display">\[
+max |f(x) + g(x)| ^ 2 + max |f(x) - g(x)| ^ 2 \neq 2 \cdot max |f(x)|^2 + 2 \cdot max |g(x)|^2
+\]</span></p>
+<p>Пример:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Добавить пример</p>
+</div>
+</div>
+</section>
+</section>
+<section id="эпсилон-сеть" class="level3">
+<h3 class="anchored" data-anchor-id="эпсилон-сеть">Эпсилон сеть</h3>
+</section>
+<section id="всюду-плотное-множество" class="level3">
+<h3 class="anchored" data-anchor-id="всюду-плотное-множество">Всюду плотное множество</h3>
+<p><span class="math inline">\(A\)</span> — всюду плотное множество в <span class="math inline">\(X\)</span>, если</p>
+<p><span class="math display">\[
+\forall x \exists a_n \in A: ||a_n - x|| \rightarrow 0, \quad n \rightarrow \infty
+\]</span></p>
+</section>
+<section id="примеры" class="level3">
+<h3 class="anchored" data-anchor-id="примеры">Примеры</h3>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{R}, \mathbb{Q}\)</span></li>
+<li><span class="math inline">\(C[0, 1], \mathbfcal{P} = \{\sum_{n=1}^m a_n x^n\}\)</span></li>
+<li><span class="math inline">\(L^p[a, b]\)</span></li>
+</ol>
+<div class="callout-info">
+<p>Дальше было определение равномощных множеств и диагональное доказательство равномощности N и Q, я думаю вы это и так знаете</p>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -284,24 +460,12 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>TODO: Добавить эквивалентные нормы.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>TODO: Добавить шары и норму Минковского.</p>
+<p>Было что-то важное про счетное множество, но я не успел записать</p>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -724,13 +888,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Главная">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Главная</span>
+      <a href="../docs/2025-02-14-linear-normed-space.html" class="pagination-link" aria-label="Линейные нормированные пространства. Норма. Примеры.">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Линейные нормированные пространства. Норма. Примеры.</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../docs/2025-02-20.html" class="pagination-link" aria-label="Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства">
-        <span class="nav-page-text">Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../docs/2025-02-20-2.html" class="pagination-link" aria-label="Линейные операторы (будет ещё на следующей лекции)">
+        <span class="nav-page-text">Линейные операторы (будет ещё на следующей лекции)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
