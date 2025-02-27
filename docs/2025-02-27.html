@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-14">
+<meta name="dcterms.date" content="2025-02-20">
 
-<title>Линейные нормированные пространства. Норма. Примеры. – Функциональный анализ</title>
+<title>Нормы линейных операторов – Функциональный анализ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../docs/2025-02-20.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../docs/2025-02-20-2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/2025-02-14-linear-normed-space.html">Линейные нормированные пространства. Норма. Примеры.</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/2025-02-27.html">Нормы линейных операторов</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,7 +143,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../docs/2025-02-14-linear-normed-space.html" class="sidebar-item-text sidebar-link active">
+  <a href="../docs/2025-02-14-linear-normed-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Линейные нормированные пространства. Норма. Примеры.</span></a>
   </div>
 </li>
@@ -162,7 +161,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../docs/2025-02-27.html" class="sidebar-item-text sidebar-link">
+  <a href="../docs/2025-02-27.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Нормы линейных операторов</span></a>
   </div>
 </li>
@@ -176,14 +175,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#пример.-ряды-фурье-в-l2-pi-pi." id="toc-пример.-ряды-фурье-в-l2-pi-pi." class="nav-link active" data-scroll-target="#пример.-ряды-фурье-в-l2-pi-pi.">Пример. Ряды Фурье в <span class="math inline">\(L^2[-\pi, \pi]\)</span>.</a></li>
-  <li><a href="#линейное-пространство." id="toc-линейное-пространство." class="nav-link" data-scroll-target="#линейное-пространство.">Линейное пространство.</a></li>
-  <li><a href="#норма" id="toc-норма" class="nav-link" data-scroll-target="#норма">Норма</a></li>
-  <li><a href="#зачем-нам-нужна-норма" id="toc-зачем-нам-нужна-норма" class="nav-link" data-scroll-target="#зачем-нам-нужна-норма">Зачем нам нужна норма?</a></li>
-  <li><a href="#предел-последовательности-в-линейном-нормированном-пространстве" id="toc-предел-последовательности-в-линейном-нормированном-пространстве" class="nav-link" data-scroll-target="#предел-последовательности-в-линейном-нормированном-пространстве">Предел последовательности в линейном нормированном пространстве</a></li>
-  <li><a href="#полное-пространство" id="toc-полное-пространство" class="nav-link" data-scroll-target="#полное-пространство">Полное пространство</a></li>
-  <li><a href="#фундаментальная-последовость" id="toc-фундаментальная-последовость" class="nav-link" data-scroll-target="#фундаментальная-последовость">Фундаментальная последовость</a></li>
-  <li><a href="#теорема-сходимости-в-полном-пространстве" id="toc-теорема-сходимости-в-полном-пространстве" class="nav-link" data-scroll-target="#теорема-сходимости-в-полном-пространстве">Теорема сходимости в полном пространстве</a></li>
+  <li><a href="#ограниченность" id="toc-ограниченность" class="nav-link active" data-scroll-target="#ограниченность">Ограниченность</a></li>
+  <li><a href="#непрерывность" id="toc-непрерывность" class="nav-link" data-scroll-target="#непрерывность">Непрерывность</a></li>
+  <li><a href="#теорема-об-эквивалентности-ограниченности-и-непрерывности" id="toc-теорема-об-эквивалентности-ограниченности-и-непрерывности" class="nav-link" data-scroll-target="#теорема-об-эквивалентности-ограниченности-и-непрерывности">Теорема об эквивалентности ограниченности и непрерывности</a>
+  <ul class="collapse">
+  <li><a href="#доказательство" id="toc-доказательство" class="nav-link" data-scroll-target="#доказательство">Доказательство</a></li>
+  </ul></li>
+  <li><a href="#норма-оператора" id="toc-норма-оператора" class="nav-link" data-scroll-target="#норма-оператора">Норма оператора</a>
+  <ul class="collapse">
+  <li><a href="#как-найти-норму-оператора" id="toc-как-найти-норму-оператора" class="nav-link" data-scroll-target="#как-найти-норму-оператора">Как найти норму оператора</a></li>
+  <li><a href="#примеры" id="toc-примеры" class="nav-link" data-scroll-target="#примеры">Примеры</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +194,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Линейные нормированные пространства. Норма. Примеры.</h1>
+<h1 class="title">Нормы линейных операторов</h1>
 </div>
 
 
@@ -203,7 +205,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 14, 2025</p>
+      <p class="date">February 20, 2025</p>
     </div>
   </div>
   
@@ -215,102 +217,221 @@ window.Quarto = {
 </header>
 
 
-<section id="пример.-ряды-фурье-в-l2-pi-pi." class="level2">
-<h2 class="anchored" data-anchor-id="пример.-ряды-фурье-в-l2-pi-pi.">Пример. Ряды Фурье в <span class="math inline">\(L^2[-\pi, \pi]\)</span>.</h2>
-<p><span class="math inline">\(L^2[-\pi, \pi]\)</span> - пространство функций на отрезке <span class="math inline">\([-\pi, \pi]\)</span>, такие что</p>
+<p><span class="math inline">\(X\)</span> — линейное пространство. <span class="math inline">\(||x||\)</span> — норма в <span class="math inline">\(X\)</span>.</p>
+<p><span class="math inline">\(A: X \rightarrow Y\)</span> — линейный оператор</p>
+<section id="ограниченность" class="level2">
+<h2 class="anchored" data-anchor-id="ограниченность">Ограниченность</h2>
+<p><span class="math inline">\(A\)</span> называется ограниченным, если</p>
 <p><span class="math display">\[
-\int_{-\pi}^{\pi} |f(x)|^2 dx &lt; \infty.
+\exists M \forall x: ||x|| \leq 1 \Rightarrow ||Ax|| \leq M
 \]</span></p>
 </section>
-<section id="линейное-пространство." class="level2">
-<h2 class="anchored" data-anchor-id="линейное-пространство.">Линейное пространство.</h2>
-<p><span class="math inline">\(X\)</span> — линейное пространство,если</p>
+<section id="непрерывность" class="level2">
+<h2 class="anchored" data-anchor-id="непрерывность">Непрерывность</h2>
+<p><span class="math inline">\(A\)</span> называется непрерывным, если</p>
 <p><span class="math display">\[
-x, y \in X \Rightarrow x + y \in X, \quad \alpha x \in X.
+\forall x_n — \text{последовательностей} \in X: x_n \rightarrow x_0 \Rightarrow Ax_n \rightarrow Ax_0
 \]</span></p>
 </section>
-<section id="норма" class="level2">
-<h2 class="anchored" data-anchor-id="норма">Норма</h2>
-<p>Норма в <span class="math inline">\(X\)</span>: <span class="math inline">\(||X|| \rightarrow \mathbb{C}\ (\mathbb{R})\)</span></p>
+<section id="теорема-об-эквивалентности-ограниченности-и-непрерывности" class="level2">
+<h2 class="anchored" data-anchor-id="теорема-об-эквивалентности-ограниченности-и-непрерывности">Теорема об эквивалентности ограниченности и непрерывности</h2>
+<p><span class="math inline">\(A\)</span> — линейный оператор.</p>
+<p><span class="math inline">\(A\)</span> ограничен <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(A\)</span> непрерывен.</p>
+<section id="доказательство" class="level3">
+<h3 class="anchored" data-anchor-id="доказательство">Доказательство</h3>
+<section id="а-ограничен-rightarrow-a-непрерывен" class="level4">
+<h4 class="anchored" data-anchor-id="а-ограничен-rightarrow-a-непрерывен">А ограничен <span class="math inline">\(\Rightarrow\)</span> A непрерывен</h4>
+<p>Пусть <span class="math inline">\(A\)</span> не непрерывен:</p>
+<p><span class="math display">\[
+\exists x_n \rightarrow 0 \forall Ax_n \nrightarrow 0
+\exists \delta &gt; 0 \forall N \exists n &gt; N: ||Ax_n|| &gt; \delta
+\]</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Котыч всё стёр, я не успел записать</p>
+</div>
+</div>
+</section>
+<section id="a-непрерывен-rightarrow-a-ограничен" class="level4">
+<h4 class="anchored" data-anchor-id="a-непрерывен-rightarrow-a-ограничен">A непрерывен <span class="math inline">\(\Rightarrow\)</span> A ограничен</h4>
+<p>Пусть <span class="math inline">\(A\)</span> не ограничен:</p>
+<p><span class="math display">\[
+\exists x_n: ||x_n|| \eq 1, ||Ax_n|| \rightarrow \infty
+\]</span></p>
+<p>Построим последовательность <span class="math inline">\(y_n\)</span></p>
+<p><span class="math display">\[
+y_n = \frac{x_n}{||Ax_n||} \rightarrow 0
+\]</span></p>
+<p><span class="math display">\[
+||Ay_n|| = \frac{||Ax_n||}{||Ax_n||} = 1
+\]</span></p>
+</section>
+</section>
+</section>
+<section id="норма-оператора" class="level2">
+<h2 class="anchored" data-anchor-id="норма-оператора">Норма оператора</h2>
+<p><span class="math display">\[
+||A|| = \sup {||Ax||: ||x|| \leq 1}
+\]</span></p>
+<section id="как-найти-норму-оператора" class="level3">
+<h3 class="anchored" data-anchor-id="как-найти-норму-оператора">Как найти норму оператора</h3>
 <ol type="1">
-<li><span class="math inline">\(||k\cdot x|| = |k|\cdot ||x||, \quad k \in \mathbb{C}\ (\mathbb{R})\)</span></li>
-<li><span class="math inline">\(|| x + y || \leq ||x|| + ||y||\)</span></li>
-<li><span class="math inline">\(||x|| \geq 0, \quad ||x|| = 0 \Leftrightarrow x = 0\)</span></li>
+<li><p>Определить верхнюю границу. Найти такое <span class="math inline">\(M\)</span>, что <span class="math display">\[
+||A|| \leq M
+\]</span></p></li>
+<li><p>Предъявить такой <span class="math inline">\(x_*: ||x_* = 1||\)</span>, что эта граница достигается.</p></li>
+</ol>
+<p><span class="math display">\[
+\exists x_*: ||x_*|| = 1, ||Ax_*|| = M
+\]</span></p>
+</section>
+<section id="примеры" class="level3">
+<h3 class="anchored" data-anchor-id="примеры">Примеры</h3>
+<p><span class="math display">\[
+A: l_n^p  \rightarrow l_n^p_1
+\]</span></p>
+<section id="p-infty" class="level4">
+<h4 class="anchored" data-anchor-id="p-infty"><span class="math inline">\(p = \infty\)</span></h4>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; ||x||_\infty = \max |x_n| \\
+&amp; A = (a_{k,j})_{k,j=1}^n \\
+&amp; Ax= (\sum_{j=1}^n a_{k,j}x_j)_{k=1}^n \\
+&amp; ||Ax|| = \max_{k} |\sum_{j=1}^n a_ij x_j| \leq \sum_{j=1}^n |a_{k,j}||x_j| \leq \max_{k} \sum_{j=1}^n |a_{k,j}||x_j| = \max_{k} \sum_{j=1}^n |a_{k,j}| \cdot \max_{j} |x_j| = |M \cdot ||x||
+\end{aligned}
+\]</span></p>
+<p>Найдем <span class="math inline">\(x_*\)</span> <span class="math display">\[
+\begin{aligned}
+&amp; M = \sum_{j=1}^n |a_{k,j}| \\
+&amp; x_* = (sign a_{k,j})_{k=1}^n \\
+&amp; ||x_*|| = 1 \\
+&amp; ||Ax_*|| = \max_{k} \sum_{j=1}^n |a_{k,j}| = M
+\end{aligned}
+\]</span></p>
+<p>Таким образом, <span class="math inline">\(||A||\)</span> в пространстве <span class="math inline">\(l_n^\infty\)</span> равна максимуму среди сумм модулей элементов строк.</p>
+</section>
+<section id="p-1" class="level4">
+<h4 class="anchored"><span class="math inline">\(p = 1\)</span></h4>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; ||x||_1 = \sum_{j=1}^n |x_j| \\
+&amp; ||Ax||_1 = \sum_{k=1}^n |\sum_{j=1}^n a_{k,j}x_j| \leq \sum_{k=1}^n \sum_{j=1}^n |a_{k,j}||x_j| = \sum_{j=1}^n |x_j| \sum_{k=1}^n |a_{k,j}| = ||x||_1 \sum_{k=1}^n |a_{k,j}| \leq M \cdot ||x||_1 \\
+&amp; M = \max_{j} \sum_{k=1}^n |a_{k,j}|
+\end{aligned}
+\]</span></p>
+<p>Найдем <span class="math inline">\(x_*\)</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Дописать</p>
+<section id="p-2" class="level4">
+<h4 class="anchored" data-anchor-id="p-2"><span class="math inline">\(p = 2\)</span></h4>
+<p><span class="math display">\[
+||x||_2 = (\sum_{j=1}^n |x_j|^2)^{1/2}
+\]</span></p>
+<p><span class="math inline">\(A\)</span> - самосопряженный оператор (эрмитов)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p><span class="math inline">\({e_n}\)</span> - ортонормированный базис.</p>
+<p><span class="math display">\[
+&amp; A e_n = \lambda_n e_n, \quad \lambda_n in \mathbb{R} \\
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; x = \sum_{k=1}^\n \alpha_k e_k \\
+&amp; ||x||^2 = \sum \alpha_k^2 \\
+&amp; ||Ax|| = ||\sum \alpha_k \lambda_k e_k|| \leq |\lambda_k^*| \sum \alpha_k^2 = ||x|| \cdot ||\lambda_k^*||
+&amp; |\lambda_k^*| = \max |\lambda_k|
+&amp; M = |\lambda_k^*| = \max |\lambda_k|
+\end{aligned}
+\]</span></p>
+<p>Найдем <span class="math inline">\(x_*\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; x_* = e_k \\
+&amp; ||x_*|| = 1 \\
+&amp; ||Ax_*|| = |\lambda_k^*| = M
+\end{aligned}
+\]</span></p>
+<section id="если-a---не-самосопряженный-оператора" class="level5">
+<h5 class="anchored" data-anchor-id="если-a---не-самосопряженный-оператора">Если <span class="math inline">\(A\)</span> - не самосопряженный оператора</h5>
+<section id="сопряженный-оператор" class="level6">
+<h6 class="anchored" data-anchor-id="сопряженный-оператор">Сопряженный оператор</h6>
+<p>Опр. <span class="math inline">\(A^*\)</span> - сопряженный оператор, если <span class="math inline">\((Ax, y) = (x, A^*y)\)</span></p>
+</section>
+<section id="свойства-сопряжения" class="level6">
+<h6 class="anchored" data-anchor-id="свойства-сопряжения">Свойства сопряжения</h6>
+<ol type="1">
+<li><span class="math inline">\((A B)^* = B^* A^*\)</span></li>
+<li><span class="math inline">\((A^*)^* = A\)</span></li>
 </ol>
 </section>
-<section id="зачем-нам-нужна-норма" class="level2">
-<h2 class="anchored" data-anchor-id="зачем-нам-нужна-норма">Зачем нам нужна норма?</h2>
-<p>Используя норму, мы можем определить расстояние между элементами пространства, а также сходимость последовательностей.</p>
-</section>
-<section id="предел-последовательности-в-линейном-нормированном-пространстве" class="level2">
-<h2 class="anchored" data-anchor-id="предел-последовательности-в-линейном-нормированном-пространстве">Предел последовательности в линейном нормированном пространстве</h2>
-<p><span class="math inline">\(x_n \in X\)</span> — последовательность элементов пространства <span class="math inline">\(X\)</span>.</p>
-<p><span class="math inline">\(x_n \rightarrow x\)</span>, если <span class="math inline">\(||x_n - x|| \rightarrow 0\)</span> при <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
-</section>
-<section id="полное-пространство" class="level2">
-<h2 class="anchored" data-anchor-id="полное-пространство">Полное пространство</h2>
-<p>Пространство <span class="math inline">\(X\)</span> называется полным, если в нем существует предел для любой фундаментальной последовательности.</p>
-<p>Или</p>
-<p><span class="math inline">\(X\)</span> — полное, если <span class="math display">\[
-x_n \in X, \quad x_n \rightarrow x_0 \Rightarrow x_0 \in X.
-\]</span></p>
-</section>
-<section id="фундаментальная-последовость" class="level2">
-<h2 class="anchored" data-anchor-id="фундаментальная-последовость">Фундаментальная последовость</h2>
-<p><span class="math inline">\(x_n \in X\)</span> — фундаментальная последовательность, если</p>
+<section id="следствия" class="level6">
+<h6 class="anchored" data-anchor-id="следствия">Следствия</h6>
+<ol type="1">
+<li><span class="math inline">\(||A^* A||\)</span> - самосопряженный оператор</li>
+<li><span class="math inline">\((A^* Ax, x) \leq 0\)</span></li>
+</ol>
+<hr>
+<p><span class="math inline">\(B = A^* A\)</span> - союзная матрица для <span class="math inline">\(A\)</span></p>
+<p><span class="math inline">\(B\)</span> - самосопряженный оператор</p>
+<p>B - положительно определенный оператор</p>
+<p>Пусть <span class="math inline">\(d_n\)</span> - собственные вектора <span class="math inline">\(B\)</span>, <span class="math inline">\(\Lambda_n\)</span> - собственные значения</p>
 <p><span class="math display">\[
-\forall \varepsilon &gt; 0 \quad \exists N: \forall n, m &gt; N \quad ||x_n - x_m|| &lt; \varepsilon.
+\begin{aligned}
+&amp; B d_n = \Lambda_n d_n \\
+&amp; \Lambda_n \geq 0
+&amp; \Lambda_1 \geq \Lambda_2 \geq \Lambda_3 \geq \ldots \geq 0
+\end{aligned}
 \]</span></p>
-</section>
-<section id="теорема-сходимости-в-полном-пространстве" class="level2">
-<h2 class="anchored" data-anchor-id="теорема-сходимости-в-полном-пространстве">Теорема сходимости в полном пространстве</h2>
+<p><span class="math inline">\(||A|| = \sqrt{\Lambda_1}\)</span> — сингулярное число оператора <span class="math inline">\(A\)</span>.</p>
 <p><span class="math display">\[
-x_n \text{ сходится} \Leftrightarrow x_n \text{ фундаментальна}.
+\begin{aligned}
+&amp; ||Ax||^2 = (Ax, Ax) = (A^* A x, x) = (Bx, x) = \sum \Lambda_n |\alpha_n|^2 \leq \Lambda_1 \sum |\alpha_n|^2 = \Lambda_1 ||x||^2 \\
+&amp; ||A|| = \sqrt{\Lambda_1}
 \]</span></p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>TODO: Добавить больше примеров пространств.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>TODO: Добавить эквивалентные нормы.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>TODO: Добавить шары и норму Минковского.</p>
-</div>
-</div>
+</section>
+</section>
+</section>
+<section id="замечания" class="level3">
+<h3 class="anchored" data-anchor-id="замечания">Замечания</h3>
+<ol type="1">
+<li>Пусть <span class="math inline">\(A\)</span> - самосопряженный оператор и все собственные значения <span class="math inline">\(\lambda_n &gt; 0\)</span>.</li>
+</ol>
+<p><span class="math inline">\(\lambda\)</span> - собственное значение <span class="math inline">\(A\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\frac{1}{\lambda}\)</span> - собственное значение <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>Тогда норма обратного оператора <span class="math inline">\(A^{-1}\)</span> равна <span class="math inline">\(\frac{1}{\sqrt{\lambda_n}}\)</span>.</p>
+<ol start="2" type="1">
+<li><span class="math inline">\(l^2\)</span> - гильбертово пространство.</li>
+</ol>
 
 
 </section>
+</div>
+</div>
+</section>
+</section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A- самосопряженный оператор, если <span class="math inline">\((Ax, y) = (x, Ay)\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -730,14 +851,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Главная">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Главная</span>
+      <a href="../docs/2025-02-20-2.html" class="pagination-link" aria-label="Линейные операторы (будет ещё на следующей лекции)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Линейные операторы (будет ещё на следующей лекции)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../docs/2025-02-20.html" class="pagination-link" aria-label="Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства">
-        <span class="nav-page-text">Неравенства Гельдера и Коши-Буняковского. Банаховы и Гильбертовы пространства</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
